@@ -4,33 +4,43 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel de Administração</title>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
   </head>
   <body>
-    <!-- Scripts de carregamento corrigidos e seguros -->
     <script src="https://jsdelivr.net"></script>
     </script>
 
     <script>
-      // Inicialização do painel com as suas configurações originais
       window.CMS.init({
         config: {
+          load_config_file: false,
           backend: {
             name: 'git-gateway',
-            branch: 'Principal'
+            branch: 'main' // AJUSTADO PARA O SEU RAMO REAL
           },
           media_folder: 'assets',
           public_folder: '/assets',
           collections: [
             {
-              name: 'landingpage',
-              label: 'Textos da Landing Page',
+              name: 'paginas',
+              label: 'Páginas do Site',
               files: [
                 {
                   file: 'index.html',
-                  label: 'Página Principal (Index)',
+                  label: 'Página Inicial (Index)',
                   name: 'index',
                   fields: [
                     { label: 'Título da Página', name: 'title', widget: 'string' }
+                  ]
+                },
+                {
+                  file: 'forta.html',
+                  label: 'Página Forta',
+                  name: 'forta',
+                  fields: [
+                    { label: 'Título', name: 'title', widget: 'string' }
                   ]
                 }
               ]
@@ -41,3 +51,4 @@
     </script>
   </body>
 </html>
+
