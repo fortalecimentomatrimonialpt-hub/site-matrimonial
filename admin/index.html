@@ -4,24 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel de Administração</title>
-    <!-- Widget de Identidade da Netlify obrigatório -->
+    <!-- Widget de Identidade da Netlify -->
     </script>
   </head>
   <body>
-    <!-- Elemento obrigatório onde o CMS vai ser desenhado -->
-    <div id="nc-root"></div>
-
-    <!-- Script principal do Decap CMS -->
-    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
-
+    <!-- Script Estável do Decap CMS -->
+    <script src="https://jsdelivr.net"></script>
+    
     <script>
-      // Força a abertura da janela de login se o utilizador não estiver autenticado
+      // Força a inicialização do CMS e abre a janela de login
+      window.CMS.init();
+      
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
+            window.netlifyIdentity.open();
           }
         });
       }
