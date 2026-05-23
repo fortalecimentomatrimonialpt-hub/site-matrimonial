@@ -9,46 +9,51 @@
     </script>
   </head>
   <body>
-    
-    <script src="https://jsdelivr.net"></script>
+    <!-- ALTERNATIVA EXCLUSIVA: Carregamento via UNPKG para evitar bloqueios -->
+    <script src="https://unpkg.com"></script>
     </script>
 
     <script>
-      window.CMS.init({
-        config: {
-          load_config_file: false,
-          backend: {
-            name: 'git-gateway',
-            branch: 'main'
-          },
-          media_folder: 'assets',
-          public_folder: '/assets',
-          collections: [
-            {
-              name: 'paginas',
-              label: 'Páginas do Site',
-              files: [
-                {
-                  file: 'index.html',
-                  label: 'Página Inicial (Index)',
-                  name: 'index',
-                  fields: [
-                    { label: 'Título da Página', name: 'title', widget: 'string' }
-                  ]
-                },
-                {
-                  file: 'forta.html',
-                  label: 'Página Forta',
-                  name: 'forta',
-                  fields: [
-                    { label: 'Título', name: 'title', widget: 'string' }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      });
+      // Garante que o código só corre se o ficheiro carregar com sucesso
+      if (window.CMS) {
+        window.CMS.init({
+          config: {
+            load_config_file: false,
+            backend: {
+              name: 'git-gateway',
+              branch: 'main'
+            },
+            media_folder: 'assets',
+            public_folder: '/assets',
+            collections: [
+              {
+                name: 'paginas',
+                label: 'Páginas do Site',
+                files: [
+                  {
+                    file: 'index.html',
+                    label: 'Página Inicial (Index)',
+                    name: 'index',
+                    fields: [
+                      { label: 'Título da Página', name: 'title', widget: 'string' }
+                    ]
+                  },
+                  {
+                    file: 'forta.html',
+                    label: 'Página Forta',
+                    name: 'forta',
+                    fields: [
+                      { label: 'Título', name: 'title', widget: 'string' }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        });
+      } else {
+        document.write('<p style="text-align:center;padding-top:50px;">Erro ao carregar o painel. Por favor, recarregue a página.</p>');
+      }
     </script>
   </body>
 </html>
