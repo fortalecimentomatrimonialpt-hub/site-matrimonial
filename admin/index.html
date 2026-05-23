@@ -4,53 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel de Administração</title>
-    <script>
-      window.CMS_MANUAL_INIT = true;
+    <!-- Sistema de autenticação obrigatório -->
     </script>
   </head>
   <body>
-    <!-- Scripts nativos da Netlify para evitar qualquer bloqueio de servidores externos -->
-    </script>
-    <script src="https://unpkg.com@^2.0.0/dist/netlify-cms.js"></script>
-
-    <script>
-      if (window.CMS) {
-        window.CMS.init({
-          config: {
-            load_config_file: false,
-            backend: {
-              name: 'git-gateway',
-              branch: 'main'
-            },
-            media_folder: 'assets',
-            public_folder: '/assets',
-            collections: [
-              {
-                name: 'paginas',
-                label: 'Páginas do Site',
-                files: [
-                  {
-                    file: 'index.html',
-                    label: 'Página Inicial (Index)',
-                    name: 'index',
-                    fields: [
-                      { label: 'Título da Página', name: 'title', widget: 'string' }
-                    ]
-                  },
-                  {
-                    file: 'forta.html',
-                    label: 'Página Forta',
-                    name: 'forta',
-                    fields: [
-                      { label: 'Título', name: 'title', widget: 'string' }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        });
-      }
-    </script>
+    <!-- Aplicação principal do CMS -->
+    <script src="https://jsdelivr.net"></script>
   </body>
 </html>
