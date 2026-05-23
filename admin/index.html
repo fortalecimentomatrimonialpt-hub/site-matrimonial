@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel de Administração</title>
-    <!-- Script de login da Netlify -->
-    </script>
   </head>
   <body>
-    <!-- Script do Decap CMS -->
-    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Scripts de carregamento corrigidos e seguros -->
+    <script src="https://jsdelivr.net"></script>
+    </script>
+
     <script>
-      // Garante a inicialização correta com as configurações embutidas
+      // Inicialização do painel com as suas configurações originais
       window.CMS.init({
         config: {
           backend: {
@@ -38,15 +38,6 @@
           ]
         }
       });
-
-      // Abre automaticamente a janela de login se não estiver autenticado
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.open();
-          }
-        });
-      }
     </script>
   </body>
 </html>
