@@ -8,20 +8,16 @@
     </script>
   </head>
   <body>
-    <!-- Script Estável do Decap CMS -->
-    <script src="https://jsdelivr.net"></script>
-    
+    <!-- Script alternativo via UNPKG (Evita o bloqueio do jsdelivr) -->
+    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
+
     <script>
-      // Força a inicialização do CMS e abre a janela de login
-      window.CMS.init();
-      
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.open();
-          }
-        });
-      }
+      // Aguarda o script carregar e força a abertura da janela de login
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.open();
+        }
+      });
     </script>
   </body>
 </html>
