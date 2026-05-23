@@ -6,11 +6,16 @@ media_folder: "assets"
 public_folder: "/assets"
 
 collections:
-  - name: "landingpage"
-    label: "Textos da Landing Page"
+  - name: "paginas"
+    label: "Páginas do Site"
     files:
       - file: "index.html"
-        label: "Página Principal (Index)"
+        label: "Página Inicial (Index)"
         name: "index"
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
+      - file: "forta.html"
+        label: "Página Forta"
+        name: "forta"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
