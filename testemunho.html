@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comentários | Fortalecimento Matrimonial</title>
+
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f7f7f5;color:#4d5661}
+.container{max-width:760px;margin:auto;padding:40px 20px}
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+h1,h2{font-family:Georgia,"Times New Roman",serif;color:#2f3c4c;margin:0 0 18px}
+p{line-height:1.8;margin:0 0 12px}
+label{display:block;margin-top:18px;font-weight:600}
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin-top:8px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,0.08);
+  font-size:15px;
+  font-family:Arial,Helvetica,sans-serif;
+}
+textarea{
+  min-height:160px;
+  resize:vertical;
+}
+.note{
+  font-size:14px;
+  color:#7d848b;
+  margin-top:8px;
+}
+.btn{
+  margin-top:24px;
+  padding:15px 24px;
+  border:none;
+  border-radius:999px;
+  background:#3f79a8;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Partilhe a sua experiência</h1>
+    <p>Obrigado por nos ajudar com o seu testemunho. Este formulário destina-se apenas à recolha de comentários após o Forta.</p>
+    <p>Os testemunhos poderão ser publicados de forma anónima como <strong>“Casal Participante, Forta Madrid”</strong>.</p>
+
+  <form name="testemunhos-forta" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="testemunhos-forta">
+
+      <p style="display:none;">
+        <label>Não preencher: <input name="bot-field"></label>
+      </p>
+
+      <label>Nome (opcional)</label>
+      <input type="text" name="nome" placeholder="Não será publicado">
+
+      <label>Data</label>
+      <input type="date" name="data">
+
+      <label>Comentário</label>
+      <textarea name="comentario" maxlength="550" placeholder="Máximo de 2 parágrafos / 6 linhas" required></textarea>
+
+      <div class="note">
+        O nome não será mostrado. O testemunho será apresentado de forma anónima.
+      </div>
+
+      <button class="btn" type="submit">Enviar comentário</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
