@@ -8,16 +8,22 @@
     </script>
   </head>
   <body>
-    <!-- Script alternativo via UNPKG (Evita o bloqueio do jsdelivr) -->
+    <!-- Elemento obrigatório para o CMS se desenhar no ecrã -->
+    <div id="nc-root"></div>
+
+    <!-- Script principal do Decap CMS -->
     <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
 
     <script>
-      // Aguarda o script carregar e força a abertura da janela de login
-      window.addEventListener('DOMContentLoaded', () => {
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.open();
-        }
-      });
+      // Força a abertura da janela de login se o utilizador não estiver autenticado
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.open();
+          }
+        });
+      }
     </script>
   </body>
 </html>
+
