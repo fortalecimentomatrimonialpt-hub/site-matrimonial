@@ -9,12 +9,11 @@
     </script>
   </head>
   <body>
-    <!-- ALTERNATIVA EXCLUSIVA: Carregamento via UNPKG para evitar bloqueios -->
-    <script src="https://unpkg.com"></script>
+    <!-- Scripts nativos da Netlify para evitar qualquer bloqueio de servidores externos -->
     </script>
+    <script src="https://unpkg.com@^2.0.0/dist/netlify-cms.js"></script>
 
     <script>
-      // Garante que o código só corre se o ficheiro carregar com sucesso
       if (window.CMS) {
         window.CMS.init({
           config: {
@@ -51,8 +50,6 @@
             ]
           }
         });
-      } else {
-        document.write('<p style="text-align:center;padding-top:50px;">Erro ao carregar o painel. Por favor, recarregue a página.</p>');
       }
     </script>
   </body>
