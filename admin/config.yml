@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: Principal
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "landingpage"
+    label: "Textos da Landing Page"
+    files:
+      - file: "index.html"
+        label: "Página Principal (Index)"
+        name: "index"
+        fields:
+          - { label: "Título da Página", name: "title", widget: "string" }
