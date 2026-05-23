@@ -4,18 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel de Administração</title>
-    <!-- Widget de Identidade da Netlify -->
+    <!-- Script de login da Netlify -->
     </script>
   </head>
   <body>
-    <!-- Elemento obrigatório para o CMS se desenhar no ecrã -->
-    <div id="nc-root"></div>
-
-    <!-- Script principal do Decap CMS -->
+    <!-- Script do Decap CMS -->
     <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
-
     <script>
-      // Força a abertura da janela de login se o utilizador não estiver autenticado
+      // Garante a inicialização correta com as configurações embutidas
+      window.CMS.init({
+        config: {
+          backend: {
+            name: 'git-gateway',
+            branch: 'Principal'
+          },
+          media_folder: 'assets',
+          public_folder: '/assets',
+          collections: [
+            {
+              name: 'landingpage',
+              label: 'Textos da Landing Page',
+              files: [
+                {
+                  file: 'index.html',
+                  label: 'Página Principal (Index)',
+                  name: 'index',
+                  fields: [
+                    { label: 'Título da Página', name: 'title', widget: 'string' }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      });
+
+      // Abre automaticamente a janela de login se não estiver autenticado
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -26,4 +50,3 @@
     </script>
   </body>
 </html>
-
