@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O que é o Forta Portugal | Fortalecimento Matrimonial Portugal</title>
+  <title>O que é o Forta Portugal | História do Fortalecimento Matrimonial</title>
+  <meta name="description" content="Conheça a origem do Fortalecimento Matrimonial, a história do Forta e a proposta deste encontro de fim de semana para casais católicos." />
+  <link rel="canonical" href="https://fortalecimentomatrimonial.com/forta.html" />
   <style>
-    :root{--bg:#f7f7f5;--text:#4d5661;--title:#2f3c4c;--muted:#7d848b;--gold:#b79a76;--blue:#3f79a8;--line:rgba(0,0,0,0.08);--shadow:0 16px 40px rgba(60,70,80,0.10)}
+    :root{
+      --bg:#f7f7f5;--text:#4d5661;--title:#2f3c4c;--title-soft:#435267;--muted:#7d848b;--gold:#b79a76;--gold-strong:#b08a62;--blue:#3f79a8;--line:rgba(0,0,0,0.08);--shadow:0 16px 40px rgba(60,70,80,0.10)
+    }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg)}
     h1,h2,h3{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--title);font-weight:400;letter-spacing:-0.02em}
     p{margin:0;line-height:1.8}
     a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,calc(100% - 40px));margin:0 auto}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
     .brand{display:flex;align-items:center;gap:16px}
@@ -19,39 +24,22 @@
     .brand-title{font-size:18px;font-weight:700;color:#6f8aa0;letter-spacing:0.16em;text-transform:uppercase}
     .brand-sub{margin-top:6px;font-size:15px;color:var(--muted)}
     .menu{display:flex;align-items:center;gap:28px;font-size:16px;font-weight:600;color:#71767b}
-    .menu a:hover{color:var(--blue)}
-    .hero{background:linear-gradient(90deg, rgba(246,239,230,0.82) 0%, rgba(248,248,248,0.95) 48%, rgba(221,236,248,0.52) 100%);padding:90px 0 72px}
-    .hero h1{font-size:clamp(48px,7vw,82px);line-height:0.95;margin-bottom:18px}
-    .eyebrow{font-size:15px;letter-spacing:0.30em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-    .hero p{font-size:21px;max-width:760px;color:#61656a}
-    .actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-size:16px;font-weight:700;border:1px solid transparent;transition:.2s ease}
-    .btn-primary{background:linear-gradient(180deg,#4b90cb 0%,#2f6fa8 100%);color:#fff;box-shadow:0 10px 24px rgba(63,121,168,0.18)}
-    .btn-secondary{background:rgba(255,255,255,0.72);border-color:rgba(63,121,168,0.16);color:#5f6f7f}
-    .section{padding:78px 0}
-    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:start}
-    .copy{display:grid;gap:18px;font-size:19px;color:#666}
-    .card{background:rgba(255,255,255,0.82);border:1px solid rgba(255,255,255,0.75);border-radius:30px;padding:22px;box-shadow:var(--shadow)}
-    .card img{width:100%;display:block;border-radius:22px}
-    .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#8a8a8a;margin-bottom:12px}
-    .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
-    .feature{background:rgba(255,255,255,0.82);border:1px solid rgba(255,255,255,0.75);border-radius:22px;padding:20px;box-shadow:var(--shadow)}
-    .feature-icon{font-size:28px;line-height:1;margin-bottom:10px}
-    .feature p{font-size:16px;color:#666;font-weight:400}
-    .feature strong{font-weight:700;color:#4f5b67}
-    .plain-photo{background:transparent;border:none;box-shadow:none;padding:0}
-    .plain-photo img{width:100%;display:block;border-radius:22px}
-    footer{padding:28px 0 48px;text-align:center;color:#8a8a8a;font-size:14px;border-top:1px solid var(--line)}
-    @media (max-width:960px){
-      .nav{align-items:flex-start;flex-direction:column}
-      .menu{flex-wrap:wrap;gap:16px}
-      .grid{grid-template-columns:1fr}
-      .feature-grid{grid-template-columns:1fr}
-      .hero p,.copy{font-size:18px}
-      .brand img{width:62px;height:62px}
-      .brand-title{font-size:15px}
-      .brand-sub{font-size:13px}
-    }
+    .menu a{white-space:nowrap}.menu a:hover{color:var(--blue)}
+    .hero{background:linear-gradient(90deg,rgba(246,239,230,0.90) 0%,rgba(248,248,248,0.95) 48%,rgba(221,236,248,0.60) 100%);padding:86px 0 74px}
+    .eyebrow{font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-strong);font-weight:800;margin-bottom:18px}
+    .hero h1{font-size:clamp(46px,7vw,78px);line-height:.98;margin-bottom:18px;color:var(--title-soft)}
+    .hero p{font-size:21px;max-width:820px;color:#5d6670}
+    .cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;font-size:16px;font-weight:700;border:1px solid transparent;box-shadow:0 10px 24px rgba(63,121,168,0.18);transition:.2s ease}
+    .btn-primary{background:linear-gradient(180deg,#4b90cb 0%,#2f6fa8 100%);color:#fff}
+    .btn-secondary{background:rgba(255,255,255,0.76);border-color:rgba(63,121,168,0.16);color:#5f6f7f;box-shadow:none}
+    .btn:hover{transform:translateY(-1px)}
+    .section{padding:68px 0}.soft{background:linear-gradient(90deg,rgba(246,239,230,0.82) 0%,rgba(248,248,248,0.95) 48%,rgba(221,236,248,0.52) 100%)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.section h2{font-size:clamp(40px,5vw,62px);margin-bottom:18px}.copy{display:grid;gap:14px;font-size:19px;color:#666}
+    .image-card{background:rgba(255,255,255,0.82);border:1px solid rgba(255,255,255,0.75);border-radius:30px;padding:18px;box-shadow:var(--shadow)}
+    .image-card img{width:100%;display:block;border-radius:22px;object-fit:cover}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}.feature{background:rgba(255,255,255,0.86);border:1px solid rgba(255,255,255,0.76);border-radius:24px;padding:20px;box-shadow:var(--shadow)}.feature-icon{font-size:28px;margin-bottom:10px}.feature p{font-size:16px;color:#666;line-height:1.7}.feature strong{color:#4f5b67}.note-box{background:rgba(255,255,255,0.88);border-left:4px solid var(--blue);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow);font-size:18px;color:#5d6670;max-width:920px}
+    footer{padding:28px 0 48px;text-align:center;color:#8a8a8a;font-size:14px;border-top:1px solid var(--line)}.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-bottom:16px}
+    @media(max-width:960px){.nav{align-items:flex-start;flex-direction:column}.menu{flex-wrap:wrap;gap:12px 18px;font-size:15px}.grid{grid-template-columns:1fr}.hero{padding:56px 0 50px}.hero h1{font-size:clamp(38px,10vw,58px)}.hero p,.copy{font-size:17px}.feature-grid{grid-template-columns:1fr}.brand img{width:62px;height:62px}.brand-title{font-size:15px}.brand-sub{font-size:13px}.section{padding:48px 0}}
   </style>
 </head>
 <body>
@@ -59,100 +47,102 @@
     <div class="container nav">
       <a class="brand" href="index.html#top">
         <img src="./assets/logo.jpg" alt="Logo Fortalecimento Matrimonial Portugal">
-        <div>
-          <div class="brand-title">Fortalecimento Matrimonial Portugal</div>
-          <div class="brand-sub">Movimento Apostólico de Schoenstatt Lisboa</div>
-        </div>
+        <div><div class="brand-title">Fortalecimento Matrimonial Portugal</div><div class="brand-sub">Movimento Apostólico de Schoenstatt Lisboa</div></div>
       </a>
       <nav class="menu">
-        <a href="index.html#encontros">Encontros Forta Portugal</a>
-        <a href="index.html#quem-somos">Quem somos</a>
+        <a href="index.html#o-que-e">O Forta</a>
+        <a href="index.html#quem-somos">Equipa</a>
+        <a href="index.html#encontros">Encontros</a>
+        <a href="index.html#videos">Vídeos</a>
         <a href="index.html#inscricoes">Inscrições</a>
-        <a href="index.html#contatos">Contatos</a>
-        <a href="index.html#rgpd">RGPD</a>
+        <a href="index.html#contactos">Contactos</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="eyebrow">Saiba mais</div>
-      <h1>O que é o Forta Portugal</h1>
-      <p>O Forta Portugal é uma proposta de fim de semana para casais, vivida em vários países, centrada no reencontro do casal um com o outro e com Deus.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="index.html#inscricoes">Ir para inscrições</a>
-        <a class="btn btn-secondary" href="index.html#quem-somos">Voltar à página inicial</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container grid">
-      <div>
-        <h2>Breve História do Fortalecimento Matrimonial</h2>
-        <div class="copy" style="margin-top:24px;">
-          <p>O Fortalecimento Matrimonial, que aqui carinhosamente chamamos de Forta Portugal, teve origem como um projeto de Schoenstatt no México, em dezembro de 1985.</p>
-          <p>De lá espalhou-se até ao Chile, Costa Rica, Paraguai, Equador, Argentina, Estados Unidos da América, Bolívia, Brasil, Alemanha, Itália, Espanha e Portugal.</p>
-          <p>Em 2015 chega a Espanha, a partir duma experiência na Costa Rica.</p>
-          <p>Em setembro de 2016 realiza-se o primeiro Fortalecimento Matrimonial em Espanha.</p>
-          <p>Em 2018 acontece o primeiro Fortalecimento Matrimonial ibérico com a participação de 4 casais de Portugal (Lisboa).</p>
-          <p><strong>Em abril de 2027 – Lisboa avança com o 1º Fortalecimento Matrimonial Portugal.</strong></p>
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Saiba mais</div>
+        <h1>História e identidade do Forta</h1>
+        <p>Esta página apresenta a origem do Fortalecimento Matrimonial, a sua expansão internacional e o sentido da proposta vivida pelos casais.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#historia">Ler a história</a>
+          <a class="btn btn-secondary" href="index.html#top">Voltar à página principal</a>
         </div>
       </div>
-      <div class="card">
-        <div class="kicker">Presença internacional</div>
-        <img src="./assets/mapa-forta.png" alt="Mapa do mundo com países onde o Forta está presente">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" style="background:linear-gradient(90deg, rgba(246,239,230,0.82) 0%, rgba(248,248,248,0.95) 48%, rgba(221,236,248,0.52) 100%);">
-    <div class="container">
-      <h2>O que é o Forta Portugal?</h2>
-      <div class="copy" style="margin-top:24px;">
-        <p><strong>Um encontro de fim-de-semana</strong></p>
-        <p>O Forta Portugal - Fortalecimento Matrimonial - é um encontro de fim de semana que permite aos casais reencontrarem-se e fortalecerem o seu relacionamento com Deus, aprofundando o seu vínculo. Está pensado para casais com o sacramento do matrimónio que enfrentam os desafios do dia-a-dia.</p>
-        <p>Durante este fim de semana, todos os elementos se conjugam para que os casais voltem a tomar consciência das qualidades do seu cônjuge e da história que partilham.</p>
-        <p>Entre as diversas atividades, acompanhados por um sacerdote, uma Irmã de Maria e vários casais voluntários, são partilhadas experiências, alegrias e desafios do matrimónio.</p>
-        <p>É um encontro que ajuda o casal a reencontrar-se, aprofundar e valorizar o dom do Sacramento Matrimonial e a sua relação com Deus.</p>
-        <p>O que acontece neste fim-de-semana não se revela — para que os casais possam ser surpreendidos e viver uma experiência que se vai revelando em cada dia.</p>
+    <section id="historia" class="section">
+      <div class="container grid">
+        <div>
+          <h2>Breve História</h2>
+          <div class="copy">
+            <p>O Fortalecimento Matrimonial teve origem como um projeto de Schoenstatt no México, em dezembro de 1985.</p>
+            <p>De lá espalhou-se até ao Chile, Costa Rica, Paraguai, Equador, Argentina, Estados Unidos da América, Bolívia, Brasil, Alemanha, Itália, Espanha e Portugal.</p>
+            <p>Em 2015 chega a Espanha, a partir duma experiência na Costa Rica.</p>
+            <p>Em setembro de 2016 realiza-se o primeiro Fortalecimento Matrimonial em Espanha.</p>
+            <p>Em 2018 acontece o primeiro Fortalecimento Matrimonial ibérico com a participação de 4 casais de Portugal, de Lisboa.</p>
+            <p><strong>Em abril de 2027, Lisboa avança com o 1.º Fortalecimento Matrimonial Portugal.</strong></p>
+          </div>
+        </div>
+        <div class="image-card"><img src="./assets/mapa-forta.png" alt="Mapa do mundo com países onde o Forta está presente"></div>
       </div>
+    </section>
 
-      <div style="margin-top:42px;">
-        <div class="eyebrow" style="margin-bottom:14px;">O que este encontro pode oferecer</div>
-        <h2>No Forta, é possível</h2>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature"><div class="feature-icon">❤️</div><p><strong>Redescobrir</strong> que a felicidade no casamento é possível.</p></div>
-        <div class="feature"><div class="feature-icon">💐</div><p><strong>Fortalecer</strong> o relacionamento, reacendendo a chama e renovando o casamento com pequenos gestos e surpresas.</p></div>
-        <div class="feature"><div class="feature-icon">⛪</div><p><strong>Descobrir</strong> a importância de ter Deus no casamento.</p></div>
-        <div class="feature"><div class="feature-icon">🕯️</div><p><strong>Compreender</strong> que todos têm dificuldades e que é possível superá-las com vontade e compromisso.</p></div>
-        <div class="feature"><div class="feature-icon">🥂</div><p><strong>Valorizar</strong> o que já construíram como casal.</p></div>
-        <div class="feature"><div class="feature-icon">💌</div><p><strong>Partilhar sentimentos</strong> num ambiente acolhedor, ajudando a curar feridas do passado.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container grid">
-      <div>
-        <h2>Para quem é?</h2>
-        <div class="copy" style="margin-top:24px; font-size:17px; font-weight:400;">
-          <p>Destina-se a casais casados pela Igreja que desejam fortalecer o seu matrimónio.</p>
-          <p>Este encontro é pensado para casais que desejam reencontrar-se um com o outro e com Deus.</p>
-          <p>É especialmente indicado para casais que sentem desgaste na relação e procuram renovar o amor, o sacramento do matrimónio e a sua relação com Deus.</p>
-          <p><strong>Venham preparados para uma surpresa!</strong></p>
+    <section id="o-que-e" class="section soft">
+      <div class="container">
+        <h2>O que é o Forta?</h2>
+        <div class="copy" style="max-width:920px;">
+          <p><strong>O Forta Portugal — Fortalecimento Matrimonial — é um encontro de fim de semana</strong> que permite aos casais reencontrarem-se e fortalecerem o seu relacionamento com Deus, aprofundando o seu vínculo.</p>
+          <p>Está pensado para casais com o sacramento do matrimónio que enfrentam os desafios do dia a dia e desejam renovar o amor, a relação e a consciência do dom que receberam.</p>
+          <p>Durante este fim de semana, todos os elementos se conjugam para que os casais voltem a tomar consciência das qualidades do seu cônjuge e da história que partilham.</p>
+          <p>O que acontece neste fim de semana não se revela — para que os casais possam ser surpreendidos e viver uma experiência que se vai revelando em cada dia.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature"><div class="feature-icon">❤️</div><p><strong>Redescobrir</strong> que a felicidade no casamento é possível.</p></div>
+          <div class="feature"><div class="feature-icon">💐</div><p><strong>Fortalecer</strong> o relacionamento, reacendendo a chama e renovando o casamento com pequenos gestos.</p></div>
+          <div class="feature"><div class="feature-icon">⛪</div><p><strong>Descobrir</strong> a importância de ter Deus no casamento.</p></div>
+          <div class="feature"><div class="feature-icon">🕯️</div><p><strong>Compreender</strong> que todos têm dificuldades e que é possível superá-las com vontade e compromisso.</p></div>
+          <div class="feature"><div class="feature-icon">🥂</div><p><strong>Valorizar</strong> o que já construíram como casal.</p></div>
+          <div class="feature"><div class="feature-icon">💌</div><p><strong>Partilhar sentimentos</strong> num ambiente acolhedor, ajudando a curar feridas do passado.</p></div>
         </div>
       </div>
-      <div class="plain-photo">
-        <img src="./assets/para-quem.png" alt="Casal a caminhar de costas">
+    </section>
+
+    <section id="para-quem" class="section">
+      <div class="container grid">
+        <div>
+          <h2>Para quem é?</h2>
+          <div class="copy">
+            <p>Destina-se a casais casados pela Igreja que desejam fortalecer o seu matrimónio.</p>
+            <p>Este encontro é pensado para casais que desejam reencontrar-se um com o outro e com Deus.</p>
+            <p>É especialmente indicado para casais que sentem desgaste na relação e procuram renovar o amor, o sacramento do matrimónio e a sua relação com Deus.</p>
+            <p><strong>Venham preparados para uma surpresa!</strong></p>
+          </div>
+        </div>
+        <div class="image-card"><img src="./assets/para-quem.png" alt="Casal a caminhar de costas"></div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <div class="note-box">Para regressar à informação prática sobre o encontro em Portugal, consulte a página principal.</div>
+        <div class="cta"><a class="btn btn-primary" href="index.html#top">Voltar à página principal</a></div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">© <span id="year"></span> Fortalecimento Matrimonial Portugal</div>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#historia">História</a>
+        <a href="#o-que-e">O que é</a>
+        <a href="#para-quem">Para quem é</a>
+        <a href="index.html#top">Página inicial</a>
+      </div>
+      <div>© <span id="year"></span> Fortalecimento Matrimonial Portugal. Todos os direitos reservados.</div>
+    </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
