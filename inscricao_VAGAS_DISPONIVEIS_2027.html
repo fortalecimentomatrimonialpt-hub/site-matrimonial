@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscrição | Fortalecimento Matrimonial</title>
+
+<style>
+body{font-family:Arial;margin:0;background:#f7f7f5;color:#4d5661}
+.container{max-width:900px;margin:auto;padding:40px}
+h1,h2{font-family:Georgia;color:#2f3c4c}
+.card{background:white;padding:30px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,0.08);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+input,select,textarea{
+width:100%;
+padding:14px;
+border-radius:14px;
+border:1px solid rgba(0,0,0,0.08);
+font-size:15px;
+}
+
+input:focus,textarea:focus,select:focus{
+outline:none;
+border-color:#3f79a8;
+box-shadow:0 0 0 3px rgba(63,121,168,0.1);
+}
+
+textarea{min-height:120px}
+
+.btn{
+margin-top:20px;
+padding:16px;
+border:none;
+border-radius:30px;
+background:#3f79a8;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 25px rgba(63,121,168,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Inscrição</h1>
+
+<div class="card" style="background:linear-gradient(90deg, rgba(246,239,230,0.6), rgba(221,236,248,0.4)); border-top:3px solid #b79a76;">
+  <h2>Que alegria receber-vos!</h2>
+
+  <p style="margin-top:12px;">
+    É com grande entusiasmo que vos acolhemos no <strong>1.º Fortalecimento Matrimonial em Portugal</strong>.
+  </p>
+
+  <p style="margin-top:12px;">
+    <strong>Data:</strong> 9 a 11 de abril de 2027<br>
+    <strong>Local:</strong> Centro de Espiritualidade Francisco e Jacinta Marto, Fátima
+  </p>
+</div>
+
+<div class="card" style="border-top:3px solid #b79a76;">
+<h2>Informações importantes</h2>
+
+<p><strong>Pagamento deve ser feito em 5 dias após inscrição.</strong></p>
+
+<p>
+<strong>Valor:</strong> xxx €<br>
+<strong>IBAN:</strong> PTXX XXXX XXXX XXXX XXXX XXXX<br>
+<strong>Titular:</strong> XXXX
+</p>
+
+<p>Indicar apelidos no descritivo da transferência bancária.</p>
+<p>Inscrição validada com email <strong>Inscrição recebida</strong>.</p>
+<p>O lugar só fica garantido com <strong>Pagamento Inscrição</strong>.</p>
+<p>Cancelamento até 15 dias antes do evento → reembolso 50%.</p>
+
+<p><strong>Email:</strong> fortalecimentomatrimonial.pt@gmail.com</p>
+</div>
+
+<div class="card">
+
+<form id="form" name="inscricao-forta" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="inscricao-forta">
+
+<p style="display:none;">
+<label>Não preencher: <input name="bot-field"></label>
+</p>
+
+<h2>Formulário</h2>
+
+<h3>Dados ELE</h3>
+<div class="grid">
+<input type="text" name="nome_ele" placeholder="Nome" required>
+<input type="email" name="email_ele" placeholder="Email" required>
+<input type="tel" name="tel_ele" placeholder="Telemóvel" required>
+<input type="date" name="nascimento_ele">
+</div>
+
+<h3>Dados ELA</h3>
+<div class="grid">
+<input type="text" name="nome_ela" placeholder="Nome" required>
+<input type="email" name="email_ela" placeholder="Email" required>
+<input type="tel" name="tel_ela" placeholder="Telemóvel" required>
+<input type="date" name="nascimento_ela">
+</div>
+
+<h3>Morada</h3>
+<input type="text" name="morada" placeholder="Morada completa">
+
+<div class="grid">
+<input type="text" name="cidade" placeholder="Cidade">
+<input type="text" name="cp" placeholder="Código Postal">
+</div>
+
+<h3>Informação</h3>
+<input type="number" name="filhos" placeholder="Número de filhos">
+
+<select name="igreja">
+<option value="">Participam em atividade apostólica?</option>
+<option>Não</option>
+<option>Sim</option>
+</select>
+
+<input type="text" name="atividade" placeholder="Se sim, qual?">
+
+<select name="como">
+<option value="">Como conheceram o Forta?</option>
+<option>Amigos</option>
+<option>Paróquia</option>
+<option>Redes sociais</option>
+<option>Outro</option>
+</select>
+
+<h3>Pessoa para contacto durante o fim de semana</h3>
+
+<div class="grid">
+  <input type="text" name="contacto_nome" placeholder="Nome">
+  <input type="text" name="contacto_relacao" placeholder="Relação (filho, irmão, amigo, outro)">
+</div>
+
+<div class="grid">
+  <input type="tel" name="contacto_tel" placeholder="Telemóvel">
+  <input type="email" name="contacto_email" placeholder="Email">
+</div>
+
+<!-- NOVO CAMPO -->
+<h3>Necessidades especiais</h3>
+<textarea name="necessidades" placeholder="Alimentação, mobilidade, outras"></textarea>
+
+<!-- EXPECTATIVA -->
+<h3 style="font-weight:700;">Expectativa para o fim de semana</h3>
+<textarea name="expectativa" placeholder="Partilhem o que esperam viver neste encontro"></textarea>
+
+<div style="margin-top:20px;">
+  <label style="display:flex; gap:10px; align-items:flex-start;">
+    <input type="checkbox" required style="width:auto;">
+    <span>Aceito a política de proteção de dados</span>
+  </label>
+</div>
+
+<button class="btn" type="submit">Enviar inscrição</button>
+
+</form>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function () {
+  emailjs.init("El6Myw4HJVkjrLmfl");
+})();
+
+function encode(data) {
+  return new URLSearchParams(data).toString();
+}
+
+document.getElementById("form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode(formData)
+    });
+
+  await emailjs.send("service_6u714jq", "template_eji1y1d", {
+  nome_ele: form.nome_ele.value,
+  nome_ela: form.nome_ela.value,
+  email_ele: form.email_ele.value,
+  email_ela: form.email_ela.value,
+  tel_ele: form.tel_ele.value,
+  tel_ela: form.tel_ela.value,
+  necessidades: form.necessidades.value ? form.necessidades.value : "Nenhuma necessidade especial indicada",
+  valor_pagamento: "xxx € por casal",
+  metodo_pagamento: "IBAN",
+  dados_pagamento: "PTXX XXXX XXXX XXXX XXXX XXXX"
+});
+
+    window.location.href = "/obrigado.html";
+
+  } catch (error) {
+    alert("Ocorreu um erro ao enviar a inscrição. Por favor, tente novamente.");
+    console.error(error);
+  }
+});
+</script>
+
+</body>
+</html>
