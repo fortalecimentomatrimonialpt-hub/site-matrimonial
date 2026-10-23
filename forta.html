@@ -56,7 +56,35 @@
       .brand-title{font-size:15px}
       .brand-sub{font-size:13px}
     }
-  </style>
+  .instagram-icon{width:40px;height:40px;flex:none;border-radius:50%;background:var(--blue);color:#fff;display:inline-flex;align-items:center;justify-content:center}
+.instagram-icon svg{width:23px;height:23px}
+.instagram-top{display:flex;align-items:center;justify-content:center}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-bottom:16px}
+
+/* Cabeçalho: texto legível e Instagram destacado na mesma linha em desktop */
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:12px}
+.brand{flex:0 1 395px;min-width:0;gap:12px}
+.brand-title{font-size:17px;letter-spacing:.11em;line-height:1.3}
+.brand-sub{font-size:14px}
+.menu{flex:0 1 auto;display:flex;justify-content:flex-end;align-items:center;flex-wrap:nowrap;gap:clamp(9px,1.05vw,19px);font-size:15px}
+.menu a{white-space:nowrap}
+.instagram-top{flex:0 0 auto;margin-left:4px;display:flex;align-items:center;justify-content:center}
+.instagram-icon{width:44px;height:44px}
+.instagram-icon svg{width:25px;height:25px}
+@media(max-width:1250px){
+ .nav{flex-wrap:wrap;justify-content:center;row-gap:14px}
+ .brand{flex:1 1 100%;justify-content:center}
+ .menu{flex:0 1 auto;flex-wrap:wrap;justify-content:center;gap:12px 18px;font-size:16px}
+ .instagram-top{flex:0 0 auto;margin-left:6px}
+}
+@media(max-width:720px){
+ .brand{justify-content:flex-start}
+ .brand-title{font-size:15px}
+ .brand-sub{font-size:13px}
+ .menu{width:100%;gap:12px 16px}
+ .instagram-top{margin:0 auto}
+}
+</style>
 </head>
 <body>
   <header>
@@ -69,12 +97,15 @@
         </div>
       </a>
       <nav class="menu">
+        <a href="index.html#o-que-e">O Forta</a>
+        <a href="index.html#quem-somos">Equipa</a>
         <a href="index.html#encontros">Encontros</a>
-        <a href="index.html#quem-somos">Quem somos</a>
         <a href="index.html#inscricoes">Inscrições</a>
-        <a href="index.html#contatos">Contatos</a>
-        <a href="index.html#rgpd">RGPD</a>
+        <a href="index.html#contactos">Contactos</a>
+        <a href="faq.html">Perguntas Frequentes</a>
+        <a href="rgpd.html">RGPD</a>
       </nav>
+      <a class="instagram-top" href="https://www.instagram.com/fortaportugal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Forta Portugal"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
     </div>
   </header>
 
@@ -162,7 +193,12 @@
   </section>
 
   <footer>
-    <div class="container">© <span id="year"></span> Fortalecimento Matrimonial Portugal</div>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html#o-que-e">O Forta</a><a href="index.html#quem-somos">Equipa</a><a href="index.html#encontros">Encontros</a><a href="index.html#inscricoes">Inscrições</a><a href="index.html#contactos">Contactos</a><a href="faq.html">Perguntas Frequentes</a><a href="rgpd.html">RGPD</a><a href="index.html#comentarios">Testemunhos</a><a href="index.html#videos">Vídeos</a>
+      </div>
+      <div>© <span id="year"></span> Fortalecimento Matrimonial Portugal</div>
+    </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
