@@ -109,10 +109,10 @@
     .menu a:hover{color:var(--blue)}
 
 
-    /* Instagram Forta Portugal — sem ligação até existir conta */
+    /* Instagram Forta Portugal — ligação à conta oficial */
     .instagram-icon{width:40px;height:40px;flex:none;border-radius:50%;background:var(--blue);color:#fff;display:inline-flex;align-items:center;justify-content:center}
     .instagram-icon svg{width:23px;height:23px}
-    .instagram-top{display:flex;align-items:center;justify-content:center;cursor:default}
+    .instagram-top{display:flex;align-items:center;justify-content:center;cursor:pointer}
     .instagram-footer{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 16px;font-size:14px;color:var(--blue)}
 
     .hero{
@@ -280,6 +280,18 @@
       object-fit:cover;
     }
 
+    #quem-somos .team-visual{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:22px;
+      min-width:0;
+    }
+    #quem-somos .team-visual .image-card{
+      width:100%;
+      box-sizing:border-box;
+    }
+
     .action-link{
       display:inline-flex;
       align-items:center;
@@ -408,18 +420,13 @@
       font-weight:700;
     }
 
-   .event-location-grid{
-  margin-top:12px;
-  display:grid;
-  grid-template-columns:minmax(0, 1fr) minmax(320px, 0.95fr);
-  gap:44px;
-  align-items:start;
-}
-    @media (min-width: 900px){
-  .event-location-grid > :last-child{
-    transform:translateY(-60px);
-  }
-}
+    .event-location-grid{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(320px, 0.95fr);
+      gap:44px;
+      align-items:center;
+    }
 
     .event-location{
       font-size:17px;
@@ -573,31 +580,7 @@
         margin-bottom:18px;
       }
     }
-  
-/* Cabeçalho: texto legível e Instagram destacado na mesma linha em desktop */
-.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:12px}
-.brand{flex:0 1 395px;min-width:0;gap:12px}
-.brand-title{font-size:17px;letter-spacing:.11em;line-height:1.3}
-.brand-sub{font-size:14px}
-.menu{flex:0 1 auto;display:flex;justify-content:flex-end;align-items:center;flex-wrap:nowrap;gap:clamp(9px,1.05vw,19px);font-size:15px}
-.menu a{white-space:nowrap}
-.instagram-top{flex:0 0 auto;margin-left:4px;display:flex;align-items:center;justify-content:center}
-.instagram-icon{width:44px;height:44px}
-.instagram-icon svg{width:25px;height:25px}
-@media(max-width:1250px){
- .nav{flex-wrap:wrap;justify-content:center;row-gap:14px}
- .brand{flex:1 1 100%;justify-content:center}
- .menu{flex:0 1 auto;flex-wrap:wrap;justify-content:center;gap:12px 18px;font-size:16px}
- .instagram-top{flex:0 0 auto;margin-left:6px}
-}
-@media(max-width:720px){
- .brand{justify-content:flex-start}
- .brand-title{font-size:15px}
- .brand-sub{font-size:13px}
- .menu{width:100%;gap:12px 16px}
- .instagram-top{margin:0 auto}
-}
-</style>
+  </style>
 </head>
 <body>
   <header>
@@ -617,9 +600,8 @@
         <a href="#inscricoes">Inscrições</a>
         <a href="#contactos">Contactos</a>
         <a href="faq.html">Perguntas Frequentes</a>
-        <a href="rgpd.html">RGPD</a>
       </nav>
-      <a class="instagram-top" href="https://www.instagram.com/fortaportugal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Forta Portugal"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="instagram-top" href="https://www.instagram.com/fortaportugal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Forta Portugal" title="Instagram Forta Portugal"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
     </div>
   </header>
 
@@ -631,34 +613,18 @@
 
       <div class="container hero-inner">
         <h1>O que é?</h1>
-        <p>O FORTA é uma iniciativa de casais do Movimento Apostólico de Schoenstatt, que nasceu na Costa Rica e tem-se espalhado pelos países onde o movimento está.</p>
-        <p>Em Portugal, a iniciativa nasceu de um grupo de casais de Schoenstatt Lisboa e conta também com a participação de casais de outros movimentos.</p>
+        <p>O Fortalecimento Matrimonial- FORTA - é uma iniciativa de casais do Movimento Apostólico de Schoenstatt, que nasceu no México e se tem espalhado pelos países onde o movimento está.</p>
+        <p>Em Portugal, a iniciativa nasceu de um grupo de casais de Schoenstatt Lisboa e conta com a participação de casais de outros movimentos, aberto a qualquer casal que queira participar, preferencialmente com mais de 10 anos de casamento.</p>
         <p>O Fortalecimento Matrimonial - FORTA - é um encontro de fim de semana dinâmico e divertido, que permite aos casais reencontrarem-se e fortalecerem o seu relacionamento com Deus.</p>
-        <p>Esta iniciativa está aberta a todos os casais, preferencialmente com mais de 10 anos de casamento.</p>
+       </p>
         <div class="cta">
-          <a class="btn btn-primary" href="forta.html">Saber mais</a>
-          <a class="btn btn-secondary" href="#quem-somos">Equipa</a>
+          <a class="btn btn-primary" href="forta.html#o-que-e-forta">Saber mais</a>
+          <a class="btn btn-secondary" href="#quem-somos">A Equipa</a>
+          <a class="btn btn-secondary" href="forta.html#breve-historia">A História</a>
           <a class="btn btn-secondary" href="#inscricoes">Inscrições em breve</a>
         </div>
       </div>
     </section>
-    
-    <section id="quem-somos" class="section soft">
-      <div class="container grid">
-        <div>
-          <h2>Quem Somos</h2>
-          <div class="copy">
-            <p>Somos uma equipa de casais que tiveram o privilégio de viver a experiência transformadora do Fortalecimento Matrimonial de Madrid e, por isso, com muita alegria e entrega, queremos partilhá-la com outros casais e com a Igreja.</p>
-          </div>
-          <a class="action-link" href="forta.html">Saiba mais</a>
-        </div>
-
-        <div class="image-card">
-          <img src="./assets/quem-somos.png" alt="Casais organizadores">
-        </div>
-      </div>
-    </section>
-
     
     <section id="encontros" class="section">
       <div class="container">
@@ -713,10 +679,43 @@
             <p>Será um fim-de-semana inesperado em que oferecemos um tempo de qualidade para o casal, com dinâmicas e vivências, para fortalecer o seu amor e a sua relação com Deus.</p>
             <p><strong style="color: #1a5fb4; font-size: 1.1em;">BREVEMENTE AQUI</strong></p>
             <p>Mais notícias sobre a data de abertura das inscrições para poder participar!</p>
+            <p style="margin-top:18px;"><a href="forta.html#breve-historia" style="color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:4px;">Conheça a história do Fortalecimento Matrimonial →</a></p>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="quem-somos" class="section soft">
+      <div class="container grid">
+        <div>
+          <h2>Quem Somos</h2>
+          <h2>A EQUIPA</h2>
+          <div class="copy">
+            <p>Somos uma equipa de casais que tiveram o privilégio de viver a experiência transformadora do Fortalecimento Matrimonial de Madrid e, por isso, com muita alegria e entrega, queremos partilhá-la com outros casais e com a Igreja.</p>
+            <p>Rita e Pedro Ascenção · Coordenadores<br>
+              Bárbara e António Noronha Andrade<br>
+              Benedita e Tiago Carvalho<br>
+              Carmo e Pedro Silveira<br>
+              Chica e Rodrigo Sampaio<br>
+              Isabel e Janeca Castro Fernandes<br>
+              Joana e Pedro Correia<br>
+              Mafalda e Pedro Marques<br>
+              Margarida e Pedro Gaivão<br>
+              Rita e Manuel Mendes Almeida<br>
+              Rosarinho e Tiago Veloso</p>
+          </div>
+        </div>
+
+        <div class="team-visual">
+          <div class="image-card">
+            <img src="./assets/quem-somos.png" alt="Casais organizadores">
+          </div>
+          <a class="btn btn-primary" href="forta.html#o-que-e-forta">Saber mais</a>
+        </div>
+      </div>
+    </section>
+
+    
 <section id="comentarios" class="section soft">
       <div class="container">
         <h2>Testemunhos</h2>
@@ -745,9 +744,7 @@
             <div class="testimonial-meta" style="margin-top:12px;">Casais espanhóis participantes — Forta Madrid</div>
           </article>
         </div>
-        <p style="margin-top:24px; text-align:center;">
-          <a href="https://www.fortalecimientomatrimonial.es/" target="_blank" rel="noopener noreferrer" class="action-link">Mais sobre Fortalecimento Matrimonial Madrid ↗</a>
-        </p>
+        <p style="margin-top:24px;text-align:center;"><a href="https://www.fortalecimientomatrimonial.es/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:4px;">Conheça o Fortalecimento Matrimonial Madrid ↗</a></p>
       </div>
     </section>
 
@@ -789,7 +786,14 @@
     </a>
   </div>
 </section>
-
+<section id="rgpd" class="section">
+  <div class="container contact-box">
+    <h2>RGPD</h2>
+    <div class="copy" style="max-width:760px;">
+      <p>Esta secção será disponibilizada em breve com a informação relativa à proteção de dados e ao tratamento das informações recolhidas.</p>
+    </div>
+  </div>
+</section>
   
   </main>
 
@@ -804,10 +808,10 @@
         <a href="#inscricoes">Inscrições</a>
         <a href="#contactos">Contactos</a>
         <a href="faq.html">Perguntas Frequentes</a>
-        <a href="rgpd.html">RGPD</a>
+        <a href="#rgpd">RGPD</a>
       </div>
-      <!-- Quando a conta existir, transformar estes elementos em links. -->
-      <div class="instagram-footer" role="img" aria-label="Instagram — em breve"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><span>Instagram</span></div>
+      <!-- Ligação à conta oficial do Instagram -->
+      <a class="instagram-footer" href="https://www.instagram.com/fortaportugal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Forta Portugal"><span class="instagram-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><span>Instagram</span></a>
       <div>© <span id="year"></span> Fortalecimento Matrimonial Portugal. Todos os direitos reservados.</div>
     </div>
   </footer>
@@ -891,3 +895,4 @@
   </script>
 </body>
 </html>
+
